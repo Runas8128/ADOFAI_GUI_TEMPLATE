@@ -11,8 +11,11 @@ def run(
     logger("Loading Map file")
     
     with open(fileName, 'r', encoding='utf-8-sig') as adofaiFile:
-        rawString = adofaiFile.read()
-        rawString = rawString.replace(',\n}\n', '\n}\n').replace(',\n}', '\n}')
+        rawString = adofaiFile.read()\
+                .replace(',\n}\n', '\n}\n')\
+                .replace(',\n}', '\n}')\
+                .replace(', }', '}')\
+                .replace(',,', ',')
         Map: MapType = json.loads(rawString)
     
     logger("Your Runner step")
