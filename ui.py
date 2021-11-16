@@ -95,7 +95,7 @@ class UI:
 
     def BuildElements(self):
         copyright = self.BuildLabel('made by Runas & ', Font("Arial", 10), Pos(270, 430))
-        copyright.bind('<Button-1>', lambda e: webbrowser.open_new('https://github.com/Runas8128/'))
+        copyright.bind('<Button-1>', lambda e: webbrowser.open_new('https://github.com/Runas8128/ADOFAI_GUI_TEMPLATE'))
         copyright = self.BuildLabel('{YOUR_NAME}, ', Font("Arial", 10), Pos(380, 430))
         copyright.bind('<Button-1>', lambda e: webbrowser.open_new('https://github.com/Your_Name/Your_Repo_Name'))
         # NOTE: You can change license since this program does'nt have SA License
